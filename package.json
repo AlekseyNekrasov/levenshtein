@@ -1,0 +1,32 @@
+{
+  "name": "levenshtein",
+  "version": "1.0.0",
+  "description": "Fast levenshtein implementation on javascript, with tests",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/*",
+    "test-w": "./node_modules/.bin/mocha tests/* -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlekseyNekrasov/levenshtein.git"
+  },
+  "keywords": [
+    "levenshtein",
+    "distance",
+    "javascript"
+  ],
+  "author": "Alexey Nekrasov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlekseyNekrasov/levenshtein/issues"
+  },
+  "homepage": "https://github.com/AlekseyNekrasov/levenshtein#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
