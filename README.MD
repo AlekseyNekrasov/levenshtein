@@ -13,4 +13,4 @@ Just another lightweight implementation covered by unit tests & with ES2015 feat
 Run `npm test`, or with watch `npm run test-w`
 
 #License
-[MIT]:https://opensource.org/licenses/MIT
+[MIT](https://opensource.org/licenses/MIT)
