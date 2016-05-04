@@ -32,15 +32,4 @@ const getDistance = (a, b) => {
 
 const _findMinValueAround = (matrix, i, j) => Math.min(matrix[i - 1][j - 1], Math.min(matrix[i][j - 1], matrix[i - 1][j]));
 
-const buildVisualMatrix = () => {
-  matrix.forEach((elements)=>{
-    console.log(elements);
-    elements.forEach((el)=>{
-      console.log(el)
-    })
-  });
-};
-
-const getMatrix = () => matrix;
-
-module.exports = { getDistance, getMatrix, buildVisualMatrix };
+module.exports = { getDistance };
