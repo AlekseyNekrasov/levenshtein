@@ -1,6 +1,6 @@
 'use strict';
 
-const getDistance= require('../libs/levenshtein').getDistance;
+const getDistance = require('../levenshtein').getDistance;
 const expect = require('chai').expect;
 
 describe('Test distance suggestion', () => {
