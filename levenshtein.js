@@ -1,53 +1,52 @@
 'use strict';
 
-const matrix = [];
-
 class Levenshtein {
-  constructor() {
-
-  }
-
-  getDistance() {
-
-  }
-
-  getMatrix() {
-
-  }
-
-  private findMinValueAround() {
-
-  }
-};
-
-const getDistance = function(a, b) {
-    if (!a.length) return b.length;
-    if (!b.length) return a.length;
+  constructor(a, b) {
+    Object.assign(this, {
+      matrix: [],
+      a,
+      b
+    })
 
     // increment along the first column of each row
     for (let i = 0; i <= b.length; i++) {
-        matrix[i] = [i];
+        this.matrix[i] = [i];
     }
 
     // increment each column in the first row
     for (let j = 0; j <= a.length; j++) {
-        matrix[0][j] = j;
+        this.matrix[0][j] = j;
     }
 
     // Fill in the rest of the matrix
     for (let i = 1; i <= b.length; i++) {
         for (let j = 1; j <= a.length; j++) {
-            matrix[i][j] = b.charAt(i - 1) == a.charAt(j - 1) // chars are equal
-                ? matrix[i - 1][j - 1] // prev element on diagonal
-                : _findMinValueAround(matrix, i, j) + 1;
+            this.matrix[i][j] = b.charAt(i - 1) == a.charAt(j - 1) // chars are equal
+                ? this.matrix[i - 1][j - 1] // prev element on diagonal
+                : this.findMinValueAround(this.matrix, i, j) + 1;
         }
     }
+  }
 
-    return matrix[b.length][a.length]; // take the last element
-}
+  getDistance() {
+    if (!this.a.length) {
+      return this.b.length;
+    }
 
-const _findMinValueAround = function(matrix, i, j) {
-  return Math.min(matrix[i - 1][j - 1], Math.min(matrix[i][j - 1], matrix[i - 1][j]))
+    if (!this.b.length) {
+      return this.a.length;
+    }
+
+    return this.matrix[this.b.length][this.a.length];
+  }
+
+  getMatrix() {
+    return this.matrix;
+  }
+
+  findMinValueAround(matrix, i, j) {
+    return Math.min(matrix[i - 1][j - 1], Math.min(matrix[i][j - 1], matrix[i - 1][j]))
+  };
 };
 
-module.exports = { getDistance };
+module.exports = Levenshtein
