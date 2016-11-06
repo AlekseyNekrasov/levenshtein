@@ -2,6 +2,24 @@
 
 const matrix = [];
 
+class Levenshtein {
+  constructor() {
+
+  }
+
+  getDistance() {
+
+  }
+
+  getMatrix() {
+
+  }
+
+  private findMinValueAround() {
+
+  }
+};
+
 const getDistance = function(a, b) {
     if (!a.length) return b.length;
     if (!b.length) return a.length;
