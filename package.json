@@ -2,7 +2,7 @@
   "name": "levenshtein",
   "version": "2.1.0",
   "description": "Fast levenshtein implementation on javascript, with tests",
-  "main": "index.js",
+  "main": "levenshtein.js",
   "directories": {
     "test": "tests"
   },
