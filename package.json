@@ -1,14 +1,14 @@
 {
   "name": "levenshtein",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Fast levenshtein implementation on javascript, with tests",
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/*",
-    "test-w": "./node_modules/.bin/mocha tests/* -w"
+    "test": "./node_modules/.bin/mocha ./tests/runner.js ./tests/**/*.js",
+    "test-w": "./node_modules/.bin/mocha ./tests/runner.js ./tests/**/*.js -w"
   },
   "repository": {
     "type": "git",
