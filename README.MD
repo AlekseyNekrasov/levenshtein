@@ -1,5 +1,5 @@
 #What?
-Lightweight implementation for Levenshtein distance calculation. 
+Lightweight implementation for Levenshtein distance calculation.
 
 Current imlementation doesnt' build the martix.
 
@@ -9,8 +9,17 @@ Just another lightweight implementation covered by unit tests & with ES2015 feat
 #Start
 `npm install`
 
+#Test
+`npm t` - for a single run.
+`npm run test-w` - for watch.
+
 #Tests
 Run `npm test`, or with watch `npm run test-w`
+
+#Roadmap
+- add performance tests and benchmarks;
+- process multiple strings;
+- add transpilation to support older browsers.
 
 #License
 [MIT](https://opensource.org/licenses/MIT)
