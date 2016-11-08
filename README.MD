@@ -7,10 +7,6 @@ Just another lightweight implementation with benchmarks, covered by unit tests &
 #Start
 `npm install`
 
-#Test
-`npm t` - for a single run.
-`npm run test-w` - for watch.
-
 #Tests
 Run `npm test`, or with watch `npm run test-w`
 
