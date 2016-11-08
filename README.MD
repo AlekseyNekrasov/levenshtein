@@ -12,9 +12,12 @@ Run `npm test`, or with watch `npm run test-w`
 
 #Benchmarks
 Tests performed on:
-`MacBook Pro (Retina, 13-inch, Early 2015)
+
+MacBook Pro (Retina, 13-inch, Early 2015)
+
 2,7 GHz Intel Core i5
-8 GB 1867 MHz DDR3`
+
+8 GB 1867 MHz DDR3
 
 Result: `getDistance x 1,001,512 ops/sec ±8.55% (73 runs sampled)`
 
