@@ -1,4 +1,4 @@
 Object.assign(global, {
-  Levenshtein: require('../levenshtein'),
+  lev: require('../up-levenshtein'),
   expect: require('chai').expect
 });

@@ -1,14 +1,15 @@
 {
   "name": "up-levenshtein",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Fast another levenshtein implementation on javascript",
-  "main": "levenshtein.js",
+  "main": "up-levenshtein.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha ./tests/runner.js ./tests/**/*.js",
-    "test-w": "./node_modules/.bin/mocha ./tests/runner.js ./tests/**/*.js -w"
+    "test-w": "./node_modules/.bin/mocha ./tests/runner.js ./tests/**/*.js -w",
+    "benchmark": "node tests/benchmark.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   "homepage": "https://github.com/AlekseyNekrasov/levenshtein#readme",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "benchmark": "^2.1.2"
   }
 }

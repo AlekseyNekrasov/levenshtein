@@ -1,4 +1,4 @@
-describe('getMatrix', function(){
+describe('getLastMatrix', function(){
   it('Should build right martix for strings', function(){
     const textRight = 'Other textsss';
     const textLeft = 'Some text';
@@ -22,11 +22,11 @@ describe('getMatrix', function(){
 });
 
 function testSet(textLeft, textRight) {
-  const lev = new Levenshtein(textLeft, textRight);
+  lev.getDistance(textLeft, textRight);
 
   for(let i = 0; i<= textRight.length; i++) {
     for(let j = 0; j<= textLeft.length; j++) {
-        expect(lev.getMatrix()[i][j]).to.not.equal(undefined);
+        expect(lev.getLastMatrix()[i][j]).to.not.equal(undefined);
     }
   }
 }
