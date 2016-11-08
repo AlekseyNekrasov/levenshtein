@@ -1,7 +1,7 @@
 {
-  "name": "levenshtein",
+  "name": "up-levenshtein",
   "version": "1.0.0",
-  "description": "Fast levenshtein implementation on javascript, with tests",
+  "description": "Fast another levenshtein implementation on javascript",
   "main": "levenshtein.js",
   "directories": {
     "test": "tests"
