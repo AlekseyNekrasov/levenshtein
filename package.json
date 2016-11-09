@@ -1,6 +1,6 @@
 {
   "name": "up-levenshtein",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "Fast another levenshtein implementation on javascript",
   "main": "up-levenshtein.js",
   "directories": {
