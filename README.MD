@@ -28,11 +28,11 @@ Tests performed on: MacBook Pro Early 2015 (2,7 GHz Intel Core i5, 8 GB 1867 MHz
 
 **Results:**
 
-| Size | Strings to compare                                                                                 | Results                                      |
-| ---- |:--------------------------------------------------------------------------------------------------:| --------------------------------------------:|
-| S    | `'some1'` and `'some2'`                                                                            | x 1,093,940 ops/sec ±2.03% (82 runs sampled) |
-| M    | `'alexey@nekrasov.nl'`, `'alexey@gmail.com'`                                                       | x 143,556 ops/sec ±1.66% (80 runs sampled)   |
-| XL   | `'I don\'t really need to compare long texts'`, `'But what wouldn\'t you do for good benchmarks?'` | x 19,024 ops/sec ±10.04% (70 runs sampled)   |
+| Size | Strings to compare | Results |
+| ---- | --- | --- |
+| S | `'some1'` and `'some2'` | x 1,093,940 ops/sec ±2.03% (82 runs sampled) |
+| M | 'alexey@nekrasov.nl' and 'alexey@gmail.com' | x 143,556 ops/sec ±1.66% (80 runs sampled) |
+| XL | 'I don\'t really need to compare long texts' and 'But what wouldn\'t you do for good benchmarks?' | x 19,024 ops/sec ±10.04% (70 runs sampled) |
 
 ##Roadmap
 - add transpilation step to support older browsers.
