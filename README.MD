@@ -22,6 +22,8 @@ returns: `@nekgasov.nl`.
 Run `npm test`, or with watch `npm run test-w`
 
 ##Benchmarks
+To run benchmarks on you machine: `npm run benchmarks`
+
 Tests performed on: MacBook Pro Early 2015 (2,7 GHz Intel Core i5, 8 GB 1867 MHz DDR3)
 
 **Results:**
