@@ -2,11 +2,9 @@
 Lightweight implementation for Levenshtein distance calculation.
 
 ##Why?
-
 Just another lightweight implementation with benchmarks, covered by unit tests & with ES2015 features usage.
 
 ##Where this library could be useful?
-
 You might consider this library if you want to measure distance between two strings. Is software development it might be useful for emails comparison, and getting suggestions.
 
 ```
@@ -38,5 +36,4 @@ Tests performed on: MacBook Pro Early 2015 (2,7 GHz Intel Core i5, 8 GB 1867 MHz
 - add transpilation step to support older browsers.
 
 ##License
-----
 [MIT](https://opensource.org/licenses/MIT)
