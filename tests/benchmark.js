@@ -10,7 +10,7 @@ suite.add('Small difference', function(){
   !!lev.getDistance('alexey@nekrasov.nl', 'alexey@gmail.com')
 })
 .add('Large difference', function(){
-  !!lev.getDistance('I don\'t realy neeed to compare long texts', 'But what wouldn\'t you do for good benchmarks?')
+  !!lev.getDistance('I don\'t really need to compare long texts', 'But what wouldn\'t you do for good benchmarks?')
 })
 // add listeners
 .on('cycle', function(event) {
