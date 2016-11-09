@@ -1,6 +1,6 @@
 {
   "name": "up-levenshtein",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "description": "Fast levenshtein implementation on javascript, with benchmarks",
   "main": "up-levenshtein.js",
   "directories": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlekseyNekrasov/levenshtein.git"
+    "url": "git+https://github.com/AlekseyNekrasov/up-levenshtein.git"
   },
   "keywords": [
     "levenshtein",
@@ -23,9 +23,9 @@
   "author": "Alexey Nekrasov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AlekseyNekrasov/levenshtein/issues"
+    "url": "https://github.com/AlekseyNekrasov/up-levenshtein/issues"
   },
-  "homepage": "https://github.com/AlekseyNekrasov/levenshtein#readme",
+  "homepage": "https://github.com/AlekseyNekrasov/up-levenshtein#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5",
