@@ -1,74 +1,54 @@
 'use strict';
 
-module.exports = { getDistance, getClosest, getLastMatrix };
+var arr = [];
+var charCodeCache = [];
 
-let lastMatrix = [];
+module.exports = { getDistance, getClosest };
 
-/**
-* Get Levenshtein distance between two stings.
-* @param {string} a
-* @param {string} b
-* @returns {number} distance
-*/
-function getDistance(a, b, config = {}) {
-  if (!a.length) {
-    return b.length;
-  }
+function getDistance(a, b) {
+  var aLen = a.length;
+  var bLen = b.length;
+  var i = 0;
+  var j = 0;
+  var bCharCode;
+  var res;
+  var tmp;
+  var tmp2;
 
-  if (!b.length) {
-    return a.length;
-  }
+	if (aLen === 0) {
+		return bLen;
+	}
 
-  if(config.caseSensitive === false) {
-    a = a.toLowerCase();
-    b = b.toLowerCase();
-  }
+	if (bLen === 0) {
+		return aLen;
+	}
 
-  const matrix = [];
-  // increment along the first column of each row
-  for (let i = 0; i <= b.length; i++) {
-      matrix[i] = [i];
-  }
+	while (i < aLen) {
+		charCodeCache[i] = a.charCodeAt(i);
+		arr[i] = ++i;
+	}
 
-  // increment each column in the first row
-  for (let j = 0; j <= a.length; j++) {
-      matrix[0][j] = j;
-  }
+	while (j < bLen) {
+		bCharCode = b.charCodeAt(j);
+		tmp = j++;
+		res = j;
 
-  // Fill in the rest of the matrix
-  for (let i = 1; i <= b.length; i++) {
-      for (let j = 1; j <= a.length; j++) {
-          matrix[i][j] = b.charAt(i - 1) == a.charAt(j - 1) // chars are equal
-              ? matrix[i - 1][j - 1] // prev element on diagonal
-              : findMinValueAround(matrix, i, j) + 1;
-      }
-  }
+	  for (i = 0; i < aLen; i++) {
+			tmp2 = bCharCode === charCodeCache[i] ? tmp : tmp + 1;
+			tmp = arr[i];
+      res = arr[i] = tmp > res
+                        ? tmp2 > res
+                          ? res + 1
+                          : tmp2
+                        : tmp2 > tmp
+                          ? tmp + 1
+                          : tmp2;
+		}
+	}
 
-  lastMatrix = matrix;
-
-  return matrix[b.length][a.length];
+	return res;
 }
 
-/**
-* Finds a minimum value for an element in martix.
-* @param {array} matrix
-* @param {number} i
-* @param {number} j
-* @returns {number} minVal
-*/
-function findMinValueAround(matrix, i, j) {
-  return Math.min(
-    matrix[i - 1][j - 1],
-    Math.min(matrix[i][j - 1], matrix[i - 1][j])
-  );
-};
-
-/**
-* Get closest element to the current
-* @param {string} target
-* @param {array} candidates
-* @returns {string} item
-*/
 function getClosest(target, items, config = {}) {
   let closest;
   let closestDistance = Infinity;
@@ -83,12 +63,4 @@ function getClosest(target, items, config = {}) {
   });
 
   return closest;
-}
-
-/**
-* Get last processed matrix.
-* @returns {array} lastMatrix
-*/
-function getLastMatrix() {
-  return lastMatrix;
 }

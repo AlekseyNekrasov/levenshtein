@@ -1,7 +1,7 @@
 {
   "name": "up-levenshtein",
-  "version": "2.0.14",
-  "description": "Fast levenshtein implementation on javascript, with benchmarks",
+  "version": "2.1.0",
+  "description": "Levenshtein distance implementation, with benchmarks, without dependencies",
   "main": "up-levenshtein.js",
   "directories": {
     "test": "tests"

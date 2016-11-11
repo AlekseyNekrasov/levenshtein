@@ -5,6 +5,7 @@ describe('getDistance', function() {
         expect(lev.getDistance('some1', 'some2')).to.equal(1);
         expect(lev.getDistance('Hello there!', 'Hoi here?')).to.equal(6);
         expect(lev.getDistance('Same text', 'Same text')).to.equal(0);
+        expect(lev.getDistance('Same text', 'Same texT')).to.equal(1);
     });
 
     it('Distance should equal to the length of word, if compare with empty string.', function() {
@@ -13,9 +14,5 @@ describe('getDistance', function() {
 
         const mockRight = 'Some text';
         expect(lev.getDistance('', mockRight)).to.equal(mockRight.length);
-    });
-
-    it('Check case sencative:false', function() {
-        expect(lev.getDistance('SOmE TExT', 'Some Text', { caseSensitive: false })).to.equal(0);
     });
 });
