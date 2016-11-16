@@ -3,7 +3,7 @@ Lightweight implementation for Levenshtein distance calculation. Without depende
 
 #Install
 ```
-$ npm install --save leven
+$ npm install --save up-levenshtein
 ```
 
 #API
@@ -41,9 +41,6 @@ Tests performed on: MacBook Pro Early 2015 (2,7 GHz Intel Core i5, 8 GB 1867 MHz
 | S | `'some1'` and `'some2'` | x 6,729,838 ops/sec ±1.62% (84 runs sampled) |
 | M | 'alexey@nekrasov.nl' and 'alexey@gmail.com' | x 987,762 ops/sec ±0.82% (85 runs sampled) |
 | XL | 'I don\'t really need to compare long texts' and 'But what wouldn\'t you do for good benchmarks?' | x 158,916 ops/sec ±1.39% (81 runs sampled) |
-
-#Roadmap
-- add transpilation step to support older browsers.
 
 #License
 [MIT](https://opensource.org/licenses/MIT)
