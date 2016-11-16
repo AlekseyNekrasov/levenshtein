@@ -13,7 +13,7 @@ getClosest(:string, :array) : string
 ```
 
 #Where this library could be useful?
-You might consider this library if you want to measure distance between two strings. Is software development it might be useful for emails comparison, and getting suggestions.
+You might consider this library if you want to measure distance between two strings. For example - emails comparison and getting correction suggestions.
 
 ```
 Levenshtein.getClosest('@nekrasov.nl', [
@@ -27,10 +27,10 @@ Levenshtein.getClosest('@nekrasov.nl', [
 returns: `@nekgasov.nl`.
 
 #Tests
-Run `npm test`, or with watch `npm run test-w`
+Run `npm t`
 
 #Benchmarks
-To run benchmarks on you machine: `npm run benchmarks`.
+To run benchmarks locally: `npm run benchmarks`.
 
 Tests performed on: MacBook Pro Early 2015 (2,7 GHz Intel Core i5, 8 GB 1867 MHz DDR3)
 
